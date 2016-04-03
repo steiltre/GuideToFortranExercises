@@ -1,0 +1,6 @@
+# ignore compiled files and module files
+*.out
+*.mod
+
+# ignore test files
+*.in
