@@ -16,7 +16,7 @@ contains
           !               ang = angle between v1 and v2
           real, dimension(1:3), intent(in) :: v1, v2
           real :: norm_1, norm_2
-          real, intent(out) :: ang
+          real :: ang
 
           norm_1 = sqrt( v1(1)**2 + v1(2)**2 + v1(3)**2 )
           norm_2 = sqrt( v2(1)**2 + v2(2)**2 + v2(3)**2 )
