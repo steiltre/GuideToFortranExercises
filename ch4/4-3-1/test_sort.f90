@@ -61,7 +61,7 @@ contains
       end subroutine read_numbers
 
       subroutine print_list()
-          print "(4f10.0)", list
+          print "(4f10.4)", list
       end subroutine print_list
 
 end program test_sort

@@ -11,7 +11,7 @@ program list_generator
           status="replace" )
 
       do i = 1,n
-        write(1,"(i8.8)")  int( rand(0) * 99999999 )
+        write(1,"(f8.2)")  ( rand(0) * 99999 )
       end do
 
       close(1)
