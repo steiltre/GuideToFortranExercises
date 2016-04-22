@@ -7,7 +7,7 @@ program list_generator
 
       read *, n
 
-      open(unit = 1, file="list.txt", action="write", &
+      open(unit = 1, file="list.in", action="write", &
           status="replace" )
 
       do i = 1,n

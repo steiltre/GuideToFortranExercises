@@ -77,6 +77,11 @@ contains
               end if
             end do
           end do
+
       end subroutine interchange_sort
+
+      subroutine print_swaps()
+          print *, "There were", swap_count, "swaps in this sort"
+      end subroutine print_swaps
 
 end module sort_module_count_swaps

@@ -5,12 +5,19 @@ program test_sort
       implicit none
 
       real, allocatable, dimension(:) :: list
+      real :: start, finish
 
       call read_numbers()
 
+      call cpu_time(start)
       call quick_sort(list)
+      call cpu_time(finish)
 
       call print_list()
+
+      call print_swaps()
+
+      call print_time()
 
 contains
 
@@ -61,7 +68,13 @@ contains
       end subroutine read_numbers
 
       subroutine print_list()
-          print "(4f10.4)", list
+          print "(4f10.2)", list
       end subroutine print_list
+
+      subroutine print_time()
+          print *, "The sort took", finish-start, "seconds"
+          print *, start
+          print *, finish
+      end subroutine print_time
 
 end program test_sort
