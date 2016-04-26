@@ -14,7 +14,7 @@ contains
 
           call random_number(uniform_random_value)
           random_result = &
-              int((high - low + 1) * uniform_random_value + low)
+              int((high - low) * uniform_random_value + low)
 
       end subroutine random_int
 
@@ -26,7 +26,7 @@ contains
 
           call random_number(uniform_random_value)
           random_result = &
-              (high - low + 1) * uniform_random_value + low
+              (high - low) * uniform_random_value + low
 
       end subroutine random_real
 
