@@ -4,3 +4,6 @@
 
 # ignore test files
 *.in
+
+# ignore shared object files
+*.so

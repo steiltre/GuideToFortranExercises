@@ -7,14 +7,12 @@ module list_generator_module
 
 contains
 
-      subroutine random_list(list)
+      subroutine random_list(list,n)
           ! Fills list with random real numbers
-          real, dimension(:), intent(in out) :: list
+          real, dimension(1:n), intent(out) :: list
           integer :: n,i
           real :: temp
           real, parameter :: lower=0, upper=99999999
-
-          n = size(list)
 
           do i = 1,n
             call random_real(temp,lower,upper)

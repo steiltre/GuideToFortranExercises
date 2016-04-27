@@ -1,0 +1,27 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+module random_module ! in random_module.f90
+    subroutine random_int(random_result,low,high) ! in random_module.f90:random_module
+        integer intent(out) :: random_result
+        integer intent(in) :: low
+        integer intent(in) :: high
+    end subroutine random_int
+    subroutine random_real(random_result,low,high) ! in random_module.f90:random_module
+        real intent(out) :: random_result
+        real intent(in) :: low
+        real intent(in) :: high
+    end subroutine random_real
+    subroutine init_random_seed ! in random_module.f90:random_module
+    end subroutine init_random_seed
+end module random_module
+module list_generator_module ! in list_generator_module.f90
+    use random_module
+    subroutine random_list(list,n) ! in list_generator_module.f90:list_generator_module
+        real dimension(n),intent(out),depend(n) :: list
+        integer :: n
+    end subroutine random_list
+end module list_generator_module
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
